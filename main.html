@@ -9,21 +9,24 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<div class="search">
-        <input type="text" class="input" placeholder="Search...">
-        <button class="btn">🔍</button>
+	<body>
+    <div class="search" id="searchBox">
+        <input type="text" class="input" id="searchInput" placeholder="Search...">
+        <button class="btn" id="searchBtn">🔍</button>
     </div>
-    <script type="text/javascript" src="./script.js">
-		<script>
+
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const searchDiv = document.querySelector(".search");
-            const searchInput = document.querySelector(".input");
-            const searchBtn = document.querySelector(".btn");
+            const searchDiv = document.getElementById("searchBox");
+            const searchInput = document.getElementById("searchInput");
+            const searchBtn = document.getElementById("searchBtn");
             
             searchBtn.addEventListener("click", function () {
                 if (!searchDiv.classList.contains("active")) {
                     searchDiv.classList.add("active");
-                    searchInput.focus();
+                    setTimeout(() => {
+                        searchInput.focus();
+                    }, 100); // Small delay to ensure focus is applied
                 }
             });
         });
