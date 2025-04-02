@@ -15,7 +15,18 @@
         <button class="btn">🔍</button>
     </div>
     <script type="text/javascript" src="./script.js">
-</script>
+		<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchDiv = document.querySelector(".search");
+            const searchInput = document.querySelector(".input");
+            const searchBtn = document.querySelector(".btn");
+            
+            searchBtn.addEventListener("click", function () {
+                searchDiv.classList.add("active");
+                searchInput.focus();
+            });
+        });
+    </script>
 
 </body>
 
