@@ -5,7 +5,6 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 	<title>Interactive Search</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -22,8 +21,10 @@
             const searchBtn = document.querySelector(".btn");
             
             searchBtn.addEventListener("click", function () {
-                searchDiv.classList.add("active");
-                searchInput.focus();
+                if (!searchDiv.classList.contains("active")) {
+                    searchDiv.classList.add("active");
+                    searchInput.focus();
+                }
             });
         });
     </script>
